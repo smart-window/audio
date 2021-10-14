@@ -4,7 +4,7 @@ Using the Jupita Node.js application in combination with Twilio Media Streams & 
 
 To get started you will need;
 
-- The Jupita Node.js application for Media Streams – Download [here](https://jupita.io/backend/media-streams/node)
+- The Jupita Node.js application for Media Streams – download [here](https://jupita.io/backend/media-streams/node)
 
 - A free Twilio account – https://www.twilio.com/try-twilio
 
