@@ -189,8 +189,7 @@ Also as a side note, if using a repository for your project, when cloning, make 
 
 1. To update Gcloud SDK run ‘Gcloud components update’ in command line.
 
-   
-   
+##
 ## How the provided Jupita Node.js application works
 Two tracks; outbound (touchpoint) + inbound (input)
 
