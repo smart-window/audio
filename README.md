@@ -189,8 +189,8 @@ Also as a side note, if using a repository for your project, when cloning, make 
 
 1. To update Gcloud SDK run ‘Gcloud components update’ in command line.
 
-#
-## How the provided Jupita Node.js application works
+
+## The Jupita Node.js application explained
 Two tracks; outbound (touchpoint) + inbound (input)
 
 > An utterance from a touchpoint is represented by ‘0’, where as an input is represented by ‘1’.
