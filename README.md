@@ -156,13 +156,13 @@ Also as a side note, if using a repository for your project, when cloning, make 
 1. Twilio CLI: brew tap twilio/brew && brew install twilio
 
 ## Adding your credentials to your Node.js application
-1. Streams.xml – found under ‘template’ directory, replace ‘*’ with your Ngrok address in the stream URL. You find your Ngrok address in
+1. Streams.xml – found under ‘template’ directory, replace * with your Ngrok address in the stream URL. You find your Ngrok address in
 
 1. Edit the gcloudignore & gitignore as per your requirements
 
 1. Edit the app.yaml values as per your GCP app engine requirements
 
-1. Edit the google_creds.json file as per your requirements or download from *
+1. Edit the google_creds.json file replacing * with the required values. 
 
 ## Troubleshooting
 1. If you are unable to get media transcriptions back in command line, check the path to the Speech to text API is correct in your .env file. Note that the environment variable (.env file) should remain inside the project folder so it may connect with the Google credentials JSON file.
