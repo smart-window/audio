@@ -482,4 +482,4 @@ When one user calls another user it allocates the parameters as mentioned above 
 
 1. ‘isCall’ is a required parameter.
    
-If you require additional support just hit us up at support@jupita.io 
+If you require additional support please contact support@jupita.io
