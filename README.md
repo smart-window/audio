@@ -1,10 +1,10 @@
 # Real time audio analytics 
 
-Using the Jupita Node.js application in combination with Twilio Media Streams & Google Speech-to-Text, you can enable real time audio analytics. This documentation will guide you step by step through setting up the required accounts, implementing the provided Jupita Node.js application, as well as testing, maintenance and troubleshooting.
+Using the Jupita Node.js application in combination with Twilio Media Streams & Google Speech-to-Text, you can enable real time audio analytics. This doc will guide you through setting up the required accounts, implementing the provided Jupita Node.js application, as well as testing, maintenance and troubleshooting. Note, any speech-to-text API will work, however Google Speech-to-Text has been used for this particular guide. 
 
 To get started you will need;
 
-- The Jupita Node.js application for Media Streams – download [here](https://jupita.io/backend/media-streams/node)
+- The Jupita Node.js audio application – download [here](https://jupita.io/backend/media-streams/node)
 
 - A free Twilio account – https://www.twilio.com/try-twilio
 
@@ -15,17 +15,17 @@ To get started you will need;
 - Ngrok - https://ngrok.com/
 
 ## Getting started with Twilio
-Twilio Media Streams provides a raw stream of any audio which can be forked via Google Speech-to-Text to Jupita. When the transcriptions are received, Jupita will use the timestamps in the transcription to create the ‘utterances’ in the order in which they occurred. There is a timestamp in each payload that increments from the time the steam starts. Two streams are sent for the call and they can be independently transcribed and fed independently into Jupita via .JSON format. All of this happens in real time during the audio call.
+Twilio Media Streams provides a raw stream of any audio which can be forked via Google Speech-to-Text to Jupita. When the transcriptions are received Jupita will apply timestamps to create the utterances in the order in which they occurred. There is a timestamp in each payload that increments from the time the stream starts. Two streams are sent for the call and they are independently transcribed and fed into Jupita via .JSON format. All of this happens in real time during the audio.
 
 ## Using Google Cloud Speech-to-Text
-The new TwiML <stream> command streams call audio to a WebSocket server. Twilio creates and manages the inbound phone number. The new Stream command takes the audio from an incoming phone call and sends it to a configured WebSocket which runs on a simple App Engine flexible environment. From there, sending the audio along as it comes to Cloud Speech-to-Text is not very challenging. Once a transcript is created, real-time analytics can be performed by Jupita.
+The Twilio [TwiML](https://www.twilio.com/docs/glossary/what-is-twilio-markup-language-twiml) <stream> command streams audio to a WebSocket server. Your Twilio account creates and manages a virtual phone number. The new Stream command takes the audio and sends it to a configured WebSocket which runs on a simple App Engine flexible environment. From there, the audio is sent to Google Speech-to-Text. Once a transcription is created, real-time analytics can be performed by Jupita.
 
-The Jupita Node.js application sends your audio to Twilio Media Streams which in turn is transcribed using Google Speech to Text. Media Streams can stream audio to and from any call made either to a phone, SIP, or any Twilio Voice SDK product, however you can send audio to Media Streams with any websocket endpoint that can accept and send base64 encoded audio.
+The Jupita Node.js audio application sends your audio to Twilio Media Streams which in turn is transcribed using Google Speech to Text. Media Streams can stream audio to and from any call made either to a phone, SIP, or any Twilio Voice SDK product, however you can send any audio to Media Streams with any websocket endpoint that can accept and send base64 encoded audio.
 
 ## Configuring your phone number
 You’ll need a Twilio phone number which you can find out more about [here](https://support.twilio.com/hc/en-us/articles/223135247-How-to-Search-for-and-Buy-a-Twilio-Phone-Number-from-Console). You’ll need to configure your phone number to respond with TwiML (which stands for Twilio Markup Language). It’s a tag-based language much like HTML, which will pass off control via a webhook that expects TwiML that you provide.
 
-Next, navigate to your list phone numbers and choose your new number. On the number settings screen, scroll down to the Voice section. There is a field labelled “A Call Comes In”. Here, choose TwiML Bin from the drop down and press the plus button next to the field to create a new TwiML Bin.
+Next, navigate to your list phone numbers and choose your new number. On the number settings screen, scroll down to the Voice section. There is a field labelled “A Call Comes In”. Here, choose TwiML Bin from the drop down and select the plus button next to the field to create a new TwiML Bin.
 
 ## Creating a TwiML Bin
 TwiML Bins are a serverless solution that can seamlessly host TwiML instructions. Using a TwiML Bin prevents you from needing to set up a webhook handler in your own web-hosted environment.
