@@ -23,7 +23,7 @@ The Twilio [TwiML](https://www.twilio.com/docs/glossary/what-is-twilio-markup-la
 The Jupita Node.js audio application sends your audio to Twilio Media Streams which in turn is transcribed using Google Speech to Text. Media Streams can stream audio to and from any call made either to a phone, SIP, or any Twilio Voice SDK product, however you can send any audio to Media Streams with any websocket endpoint that can accept and send base64 encoded audio.
 
 ## Configuring your phone number
-You’ll need a Twilio phone number which you can find out more about [here](https://support.twilio.com/hc/en-us/articles/223135247-How-to-Search-for-and-Buy-a-Twilio-Phone-Number-from-Console). You’ll need to configure your phone number to respond with TwiML (which stands for Twilio Markup Language). It’s a tag-based language much like HTML, which will pass off control via a webhook that expects TwiML that you provide.
+You’ll need a [Twilio phone number](https://support.twilio.com/hc/en-us/articles/223135247-How-to-Search-for-and-Buy-a-Twilio-Phone-Number-from-Console). You’ll need to configure your phone number to respond with TwiML (which stands for Twilio Markup Language). It’s a tag-based language much like HTML, which will pass off control via a webhook that expects TwiML that you provide.
 
 Next, navigate to your list phone numbers and choose your new number. On the number settings screen, scroll down to the Voice section. There is a field labelled “A Call Comes In”. Here, choose TwiML Bin from the drop down and select the plus button next to the field to create a new TwiML Bin.
 
