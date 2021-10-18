@@ -1,6 +1,6 @@
 # Real time audio analytics 
 
-Using the Jupita Node.js application in combination with Twilio Media Streams & Google Speech-to-Text, you can enable real time audio analytics. This doc will guide you through setting up the required accounts, implementing the provided Jupita Node.js application, as well as testing, maintenance and troubleshooting. Note, any speech-to-text API will work, however Google Speech-to-Text has been used for this particular guide. 
+Using the Jupita Node.js application in combination with Twilio Media Streams & Google Speech-to-Text, you can enable real time audio analytics. This doc will guide you through setting up the required accounts, implementing the provided Jupita Node.js audio application, as well as testing, maintenance and troubleshooting. Note, any speech-to-text API will work, however Google Speech-to-Text has been used for this particular guide. 
 
 To get started you will need;
 
