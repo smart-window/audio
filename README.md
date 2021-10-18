@@ -209,7 +209,7 @@ classMediaStreamHandler {
   }
 ```
 
-In the below code snapshot you will see that all required data objects are initiated null to start with such as touchpointID & inputID, to and from and they validate the `messageType`. If the app starts receiving event streams we specify that data at custom parameters such as touchpoint and input, if the data is null it returns null. We also track handlers by `messageType` ‘1’ and ‘0’.
+In the below code snapshot you will see that all required data objects are initiated null to start with such as touchpointID & inputID, to and from and they validate the `messageType`. If the app starts receiving event streams we specify that data at custom parameters such as touchpoint and input, if the data is null it returns null. We also track handlers by `messageType` 0 (touchpoint) & 1 (input).
 ```
 processMessage(message){
 
