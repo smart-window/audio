@@ -190,8 +190,6 @@ Note, if using a repository for your project, when cloning, make sure to include
 ## The Jupita Node.js audio application explained
 Two tracks; outbound (touchpoint) + inbound (input)
 
-> An utterance from a touchpoint is represented by ‘0’, where as an input is represented by ‘1’.
-
 In the below code snapshot you will see that the media stream handler connection is initiated by calling
 ‘connection.on’
 
