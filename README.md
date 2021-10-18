@@ -289,7 +289,7 @@ constservice = newTranscriptionService();
 
             log(`Touchpoint : ${this.touchpointID} || Input : ${this.inputID} || To: ${this.to} || From: ${this.from} || MessageType: ${messageType}` );
 ```
-This is the post request which dumps all the transcripts collected to a server of your choosing, it also adds timestamps automatically so you can have review the accuracy. The last snippet is a validation for binary messages as they are not supported and will provide a log message.
+This is the post request, it also adds timestamps automatically. The last snippet is a validation for binary messages as they are not supported and will provide a log message.
 
 ```
 axios.post('https://api.jupita.io/v1/dump', {
