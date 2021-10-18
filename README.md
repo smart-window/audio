@@ -15,7 +15,7 @@ To get started you will need;
 - Ngrok - https://ngrok.com/
 
 ## Getting started with Twilio
-Twilio Media Streams provides a raw audio stream of your audio calls which can be forked via Google Speech-to-Text to Jupita. When the transcriptions are received, Jupita will use the timestamps in the transcription to create the ‘utterances’ in the order in which they occurred. There is a timestamp in each payload that increments from the time the steam starts. Two streams are sent for the call and they can be independently transcribed and fed independently into Jupita via .JSON format. All of this happens in real time during the audio call.
+Twilio Media Streams provides a raw stream of any audio which can be forked via Google Speech-to-Text to Jupita. When the transcriptions are received, Jupita will use the timestamps in the transcription to create the ‘utterances’ in the order in which they occurred. There is a timestamp in each payload that increments from the time the steam starts. Two streams are sent for the call and they can be independently transcribed and fed independently into Jupita via .JSON format. All of this happens in real time during the audio call.
 
 ## Using Google Cloud Speech-to-Text
 The new TwiML <stream> command streams call audio to a WebSocket server. Twilio creates and manages the inbound phone number. The new Stream command takes the audio from an incoming phone call and sends it to a configured WebSocket which runs on a simple App Engine flexible environment. From there, sending the audio along as it comes to Cloud Speech-to-Text is not very challenging. Once a transcript is created, real-time analytics can be performed by Jupita.
@@ -408,7 +408,7 @@ npm i for installing node_modules
 npm update
 ```
 
-## Dumping your audio calls to Jupita
+## Dumping your audio to Jupita
 URL https://api.jupita.io/v1/dump
 
 Parameters
