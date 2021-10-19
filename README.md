@@ -1,10 +1,10 @@
-# Real time audio analytics 
+# Jupita Node.js audio SDK
 
-Using the Jupita Node.js application in combination with Twilio Media Streams & Google Speech-to-Text, you can enable real time audio analytics. This doc will guide you through setting up the required accounts, implementing the provided Jupita Node.js audio application, as well as testing, maintenance and troubleshooting. Note, any speech-to-text API will work, however Google Speech-to-Text has been used for this particular guide. 
+Using the Jupita Node.js SDK in combination with Twilio Media Streams & any speech-to-text API, you can enable real time audio analytics. This guide will help you set up the required accounts, implement the provided Jupita Node.js audio SDK, as well as testing, maintenance & troubleshooting. Note that any speech-to-text API will work, however Google Speech-to-Text has been used for this particular guide. 
 
 To get started you will need;
 
-- The Jupita Node.js audio application – download [here](https://jupita.io/backend/media-streams/node)
+- The Jupita Node.js audio SDK – download [here](https://jupita.io/backend/media-streams/node)
 
 - A free Twilio account – https://www.twilio.com/try-twilio
 
@@ -17,7 +17,7 @@ To get started you will need;
 ## Getting started with Twilio
 Twilio Media Streams provides a raw stream of any audio which can be forked via Google Speech-to-Text to Jupita. When the transcriptions are received Jupita will apply timestamps to create the utterances in the order in which they occurred. There is a timestamp in each payload that increments from the time the stream starts. Two streams are sent for the call and they are independently transcribed and fed into Jupita via .JSON format. All of this happens in real time during the audio.
 
-The Twilio [TwiML](https://www.twilio.com/docs/glossary/what-is-twilio-markup-language-twiml) <stream> command streams audio to any WebSocket server. Your Twilio account creates and manages a virtual phone number. The new Stream command takes the audio and sends it to a configured WebSocket which runs on a simple App Engine flexible environment. From there, the audio is sent to Google Speech-to-Text, transcribed and sent to Jupita in real-time. The provided Jupita Node.js audio application handles this entire process end-to-end. 
+The Twilio [TwiML](https://www.twilio.com/docs/glossary/what-is-twilio-markup-language-twiml) <stream> command streams audio to any WebSocket server. Your Twilio account creates and manages a virtual phone number. The new Stream command takes the audio and sends it to a configured WebSocket which runs on a simple App Engine flexible environment. From there, the audio is sent to Google Speech-to-Text, transcribed and sent to Jupita in real-time. The provided Jupita Node.js audio SDK handles this entire process end-to-end. 
 
 Media Streams can stream audio to and from any call made either to a phone, SIP, or any Twilio Voice SDK product, however you can send any audio to Media Streams with any websocket endpoint that can accept and send base64 encoded audio.
 
@@ -73,7 +73,7 @@ Create a service account for your App Engine flexible environment to utilize whe
 Gcloud compute firewall-rules create default-allow-websockets-8080 --allow tcp:8080 --target-tags WebSocket --description "Allow WebSocket traffic on port 8080"
 
 ## App spot
-You will also require a URL from your selected hosting platform - such as GCP’s ‘App engine’ and apply that URL into your post request in the Jupita Node.js audio app file ‘server.js’. This is covered later in this document.
+You will also require a URL from your selected hosting platform - such as GCP’s ‘App engine’ and apply that URL into your post request in the Jupita Node.js audio SDK file ‘server.js’. This is covered later in this document.
 
 ## App Engine flexible environment setup
 For the App Engine application, we will be taking the sample code from Twilio’s repository to create a simple node.js WebSocket server. You can find the GitHub page here with instructions on environment setup. Once the code is in your project folder, you’ll need to do a few more things to deploy your application:
@@ -112,10 +112,10 @@ Additional Google Cloud Platform links –
 
 - https://cloud.google.com/speech-to-text/docs/reference/rpc/google.cloud.speech.v1/
 
-## The Jupita Node.js audio application
-Here’s what you need to get started using the Jupita Node.js application.
+## The Jupita Node.js audio SDK
+Here’s what you need to get started using the Jupita Node.js SDK.
 
-1. Download the Jupita Node.js audio application [here](https://jupita.io/backend/media-streams/node)
+1. Download the Jupita Node.js audio SDK [here](https://jupita.io/backend/media-streams/node)
 
 1. Place the folder on your local machine and open terminal
 
@@ -187,7 +187,7 @@ Note, if using a repository for your project, when cloning, make sure to include
 1. To update Gcloud SDK run ‘Gcloud components update’ in command line.
 
 
-## The Jupita Node.js audio application explained
+## The Jupita Node.js audio SDK explained
 Two tracks; outbound (touchpoint) + inbound (input)
 
 In the below code snapshot you will see that the media stream handler connection is initiated by calling
@@ -370,7 +370,7 @@ In order to do this, navigate to the line of code `// log('Touchpoint : ${this.t
 
 1. Beautify
 
-## List of NPM Packages used within the Jupita Node.js application - 
+## List of NPM Packages used within the Jupita Node.js audio SDK - 
 1. dotenv
 
 1. @google-cloud/speech
