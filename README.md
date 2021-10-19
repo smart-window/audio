@@ -475,6 +475,6 @@ When one user calls another user it allocates the parameters as mentioned above 
 
 1. The API will return a raw (not JSON) string.
 
-1. ‘isCall’ is a required parameter.
+1. ‘isCall’ is a required parameter & must be set to `true`.
    
 If you require additional support please contact support@jupita.io
