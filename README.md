@@ -45,19 +45,11 @@ The <Stream> tag starts the audio stream asynchronously and then control moves o
 
 Save your TwiML Bin and make sure that you see your friendly name in the “A Call Comes In“ drop down next to TwiML Bin. Make sure to Save your phone number.
 
-Additional Twilio references –
+Additional Twilio references;
 
-- https://www.twilio.com/blog/live-transcribing-phone-calls-using-twilio-media-streams-and-google-speech-text
+- [TwiML](https://www.twilio.com/docs/voice/twiml)
 
-- https://www.twilio.com/media-streams
-
-- https://www.youtube.com/watch?v=y_ia-9Brm78
-
-- https://www.twilio.com/docs/voice/twiml
-
-- https://www.twilio.com/docs/voice/tutorials/consume-real-time-media-stream-using-websockets-python-and-flask
-
-- https://github.com/twilio/media-streams
+- [Consume a real-time Media Stream](https://www.twilio.com/docs/voice/tutorials/consume-real-time-media-stream-using-websockets-python-and-flask)
 
 You will also need to setup your .env (environment variable) file – Note that this file must be placed inside your Node.js application folder. More info on this can be found [here](https://www.twilio.com/blog/2017/01/how-to-set-environment-variables.html).
 
