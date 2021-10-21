@@ -66,11 +66,11 @@ This setup can either be done in an existing Google Cloud project or a new proje
 
 Note, choose your app engine location carefully, you are unable to change this once created. Once you have the project selected that you want to work in, you’ll need to set up a few key things before getting started:
 
-Enable APIs for Google Speech-to-Text. You can do that by following the instructions here and searching for “Cloud Speech-to-Text API”.
+Enable APIs for Google Speech-to-Text by following the instructions [here](https://cloud.google.com/speech-to-text/docs/quickstart-ui).
 
 Create a service account for your App Engine flexible environment to utilize when accessing other Google Cloud services. You’ll need to download the private key as a JSON file as well. Add firewall rules to allow your App Engine flexible environment to accept incoming connections for the WebSocket. A command such as the following should work from a Gcloud enabled terminal:
 
-Gcloud compute firewall-rules create default-allow-websockets-8080 --allow tcp:8080 --target-tags WebSocket --description "Allow WebSocket traffic on port 8080"
+`Gcloud compute firewall-rules create default-allow-websockets-8080 --allow tcp:8080 --target-tags WebSocket --description "Allow WebSocket traffic on port 8080"`
 
 ## App spot
 You will also require a URL from your selected hosting platform - such as GCP’s ‘App engine’ and apply that URL into your post request in the Jupita Node.js audio SDK file ‘server.js’. This template is already setup in the Jupita Node.js audio SDK. 
