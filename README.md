@@ -76,9 +76,7 @@ Create a service account for your App Engine flexible environment to utilize whe
 You will also require a URL from your selected hosting platform - such as GCP’s ‘App engine’ and apply that URL into your post request in the Jupita Node.js audio SDK file ‘server.js’. This template is already setup in the Jupita Node.js audio SDK. 
 
 ## App Engine flexible environment setup
-For the App Engine application, please we will be taking the sample code from Twilio’s repository to create a simple node.js WebSocket server. You can find the GitHub page here with instructions on environment setup. Once the code is in your project folder, you’ll need to do a few more things to deploy your application:
-
-Place the service account JSON key you downloaded earlier, rename it to ‘google_creds.json’, and place it in the same directory as the node.js code.
+Place the service account JSON key you downloaded earlier, rename it to ‘google_creds.json’, and replace it in the same directory as the node.js code.
 
 Your ‘app.yaml’ file will look similar to the following;
 
