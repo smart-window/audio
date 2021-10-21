@@ -4,15 +4,15 @@ Using the Jupita Node.js audio SDK in combination with Twilio Media Streams & an
 
 To get started you will need;
 
-- The Jupita Node.js audio SDK – download [here](https://jupita.io/backend/media-streams/node)
+- [The Jupita Node.js audio SDK](https://jupita.io/backend/media-streams/node)
 
-- A free Twilio account – https://www.twilio.com/try-twilio
+- [A free Twilio account](https://www.twilio.com/try-twilio)
 
-- Twilio’s CLI - https://www.twilio.com/docs/twilio-cli/quickstart
+- [Twilio’s CLI](https://www.twilio.com/docs/twilio-cli/quickstart)
 
-- A Google Cloud Platform account - https://cloud.google.com/
+- [A Google Cloud Platform account](https://cloud.google.com/)
 
-- Ngrok - https://ngrok.com/
+- [Ngrok](https://ngrok.com/)
 
 ## Getting started with Twilio
 Twilio Media Streams provides a raw stream of any audio which can be forked via Google Speech-to-Text to Jupita. When the transcriptions are received Jupita will apply timestamps to create the utterances in the order in which they occurred. There is a timestamp in each payload that increments from the time the stream starts. 
