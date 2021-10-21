@@ -84,21 +84,21 @@ Your ‘app.yaml’ file will look similar to the following (you will need to co
 
 Once these two items are in order, you will be able to deploy your application with the command ‘Gcloud app deploy’. Once deployed, you can tail the console logs with the command ‘Gcloud app logs tail -s default’.
    
-To setup your Google Cloud Platform account install & initialise the Cloud SDK - https://cloud.google.com/sdk/docs/
+To setup your Google Cloud Platform account install & initialise the Cloud SDK by following the steps [here](https://cloud.google.com/sdk/docs/).
 
 Additional Google Cloud Platform links –
 
-- https://cloud.google.com/appengine/docs
+- [App Engine](https://cloud.google.com/appengine/docs)
 
-- https://cloud.google.com/appengine/pricing
+- [GCP pricing](https://cloud.google.com/appengine/pricing)
 
-- https://cloud.google.com/appengine/docs/standard#instance_classes
+- [Instance classes](https://cloud.google.com/appengine/docs/standard#instance_classes)
 
-- https://cloud.google.com/speech-to-text/docs/basics/
+- [Speech-to-Text basics](https://cloud.google.com/speech-to-text/docs/basics/)
 
-- https://cloud.google.com/speech-to-text/docs/enhanced-models
+- [Enhanced model](https://cloud.google.com/speech-to-text/docs/enhanced-models)
 
-- https://cloud.google.com/speech-to-text/docs/reference/rpc/google.cloud.speech.v1/
+- [References](https://cloud.google.com/speech-to-text/docs/reference/rpc/google.cloud.speech.v1/)
 
 ## The Jupita Node.js audio SDK
 Deploy the Jupita Node.js audio SDK.
