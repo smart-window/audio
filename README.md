@@ -76,9 +76,9 @@ Create a service account for your App Engine flexible environment to utilize whe
 You will also require a URL from your selected hosting platform - such as GCP’s ‘App engine’ and apply that URL into your post request in the Jupita Node.js audio SDK file ‘server.js’. This template is already setup in the Jupita Node.js audio SDK. 
 
 ## App Engine flexible environment setup
-Place the service account JSON key you downloaded earlier, rename it to ‘google_creds.json’, and replace it in the same directory as the node.js code.
+Take the service account JSON key you downloaded earlier, rename it to ‘google_creds.json’ and replace the same named file in the Jupita Node.js audio SDK with this file. 
 
-Your ‘app.yaml’ file will look similar to the following;
+Your ‘app.yaml’ file will look similar to the following (you will need to configure the variables of your app engine to suit your projects requirements);
 
 - runtime: nodejs
 
@@ -89,8 +89,6 @@ Your ‘app.yaml’ file will look similar to the following;
 - network:
 
 - instance_tag: WebSocket
-
-Note, you will need to configure the variables of your app engine to suit your projects requirements.
 
 Once these two items are in order, you will be able to deploy your application with the command ‘Gcloud app deploy’. Once deployed, you can tail the console logs with the command ‘Gcloud app logs tail -s default’.
    
@@ -111,7 +109,7 @@ Additional Google Cloud Platform links –
 - https://cloud.google.com/speech-to-text/docs/reference/rpc/google.cloud.speech.v1/
 
 ## The Jupita Node.js audio SDK
-Here’s what you need to get started using the Jupita Node.js SDK.
+Deploy the Jupita Node.js audio SDK.
 
 1. Download the Jupita Node.js audio SDK [here](https://jupita.io/backend/media-streams/node)
 
